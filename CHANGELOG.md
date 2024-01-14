@@ -1,3 +1,11 @@
+## [1.0.1](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.0...v1.0.1) (2024-01-14)
+
+
+### chore
+
+* **CI:** build the project before releasing ([e2f5ff2](https://github.com/tsabolov/nestjs-rapidoc/commit/e2f5ff25b5f419d51ab0eb82f3c03ebadd23bfc9))
+* **publish:** make explicitly the project public ([c64b5df](https://github.com/tsabolov/nestjs-rapidoc/commit/c64b5df08c4b881f3b150e41f119da0e45d58bc8))
+
 # 1.0.0 (2024-01-14)
 
 
