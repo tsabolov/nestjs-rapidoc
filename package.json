@@ -14,6 +14,7 @@
     "type": "git",
     "url": "git+ssh://git@github.com/tsabolov/nestjs-rapidoc.git"
   },
+  "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
     "prepare": "husky install",
