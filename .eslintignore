@@ -1,0 +1,18 @@
+# Ignore everything
+*
+
+# Except these files
+!*.ts
+!*.d.ts
+
+# .. also in subdirectories
+!*/
+
+# ... in these directories
+!src/*
+!e2e/*
+
+# Explicitly ignore these locations
+node_modules
+dist
+lib

@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "removeComments": true,
+    "declaration": true,
+    "sourceMap": false,
+
+    "baseUrl": ".",
+    "outDir": "./lib",
+    "rootDir": "./src"
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist", "__tests__", "e2e"]
+}

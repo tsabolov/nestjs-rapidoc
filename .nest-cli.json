@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "e2e",
+  "entryFile": "e2e/manual-e2e",
+  "compilerOptions": {
+    "tsConfigPath": "tsconfig.e2e.json"
+  }
+}

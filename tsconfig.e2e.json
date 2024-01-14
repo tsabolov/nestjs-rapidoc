@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "removeComments": false,
+    "declaration": true,
+    "sourceMap": true,
+
+    "incremental": true,
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "rootDir": "."
+  },
+  "include": ["src/**/*", "e2e/**/*"],
+  "exclude": ["node_modules", "dist", "lib"]
+}

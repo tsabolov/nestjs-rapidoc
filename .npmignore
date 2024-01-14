@@ -1,0 +1,6 @@
+# Ignore everithing
+*
+
+# Except for these files
+!package.json
+!lib/**/*
