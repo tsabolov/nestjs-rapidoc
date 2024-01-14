@@ -1,0 +1,51 @@
+name: E2E
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  e2e:
+    name: E2E
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Restore npm cache
+        uses: actions/cache/restore@v3
+        id: cache
+        with:
+          path: .npm
+          key: nestjs-rapidoc-${{ hashFiles('package-lock.json') }}
+
+      - name: Install dependencies
+        run: npm clean-install --cache .npm --prefer-offline --no-audit --silent
+
+      - name: Store npm cache
+        if: steps.cache.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v3
+        with:
+          path: .npm
+          key: nestjs-rapidoc-${{ hashFiles('package-lock.json') }}
+
+      - name: E2E
+        run: npm run test:e2e

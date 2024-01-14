@@ -4,16 +4,15 @@
 # Except for these files
 !*.ts
 !*.d.ts
-!jest.config.js
+!jest.config.cjs
 
 # .. also in subdirectories
 !*/
 
 # ... in these ones
-!apps/**/src/*
-!libs/**/src/*
+!src/*
 
 # Explicitly ignore these locations
 node_modules
-apps/**/dist
-libs/**/dist
+dist
+lib
