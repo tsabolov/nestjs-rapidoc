@@ -47,6 +47,7 @@ jobs:
 
       - name: Release
         env:
+          HUSKY: 0 # disable Husky hooks because of long commit message from semantic-release
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
