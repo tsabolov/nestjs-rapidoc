@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.1...v1.0.2) (2024-01-14)
+
+
+### chore
+
+* **package:** add license field ([429a913](https://github.com/tsabolov/nestjs-rapidoc/commit/429a913ecfd7bfe22a120262274defde79fa4df9))
+
 ## [1.0.1](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.0...v1.0.1) (2024-01-14)
 
 
