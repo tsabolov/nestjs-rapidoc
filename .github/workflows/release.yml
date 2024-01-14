@@ -45,6 +45,9 @@ jobs:
       - name: Verify the integrity of provenance attestations and registry signatures for installed dependencies
         run: npm audit signatures
 
+      - name: Build
+        run: npm run build
+
       - name: Release
         env:
           HUSKY: 0 # disable Husky hooks because of long commit message from semantic-release
