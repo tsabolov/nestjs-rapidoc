@@ -1,3 +1,12 @@
+## [1.0.3](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.2...v1.0.3) (2024-01-15)
+
+
+### chore
+
+* **E2E:** add some more test cases ([7486d9c](https://github.com/tsabolov/nestjs-rapidoc/commit/7486d9c6f3523000af9866f81b09660b7772844c))
+* **publish:** enable npm provenance ([9ffb481](https://github.com/tsabolov/nestjs-rapidoc/commit/9ffb48114e9720ffb454c85322015f510ab0a739))
+* **README:** fix formatting ([9834b61](https://github.com/tsabolov/nestjs-rapidoc/commit/9834b617be26ff6ea6e65975d58b11d15b80ab9f))
+
 ## [1.0.2](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.1...v1.0.2) (2024-01-14)
 
 

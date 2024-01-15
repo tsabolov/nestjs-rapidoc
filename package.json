@@ -1,6 +1,6 @@
 {
   "name": "@b8n/nestjs-rapidoc",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "NestJS module for RapiDoc",
   "keywords": [
     "nestjs",
