@@ -37,7 +37,7 @@ bootstrap();
 
 ## Setup Options
 
-Customize RapiDoc module behavior by providing an options object that adheres to the `RapidocCustomOptions` interface. Pass this object as the fourth argument to the `RapidocModule`#setup method.
+Customize RapiDoc module behavior by providing an options object that adheres to the `RapidocCustomOptions` interface. Pass this object as the fourth argument to the `RapidocModule#setup` method.
 
 ```typescript
 export interface RapidocCustomOptions {
@@ -64,7 +64,7 @@ There are slight changes compared to the `SwaggerCustomOptions` from the `@nestj
 - The introduction of `customLogo` enables changing the default RapiDoc logo in the sidebar. It should be a URL pointing to the custom logo.
 - The `validatorUrl` has been removed as it is not used by RapiDoc.
 - Both the `url` and `urls` attributes have been removed since they are not utilized by RapiDoc.
-- The `rapidocOptions` attribute has been added to configure the RapiDoc UI. This attribute must adhere to the `RapidocUIOptions` interface. Essentially, this interface represents a `camelCase` version (e.g., `sort-tags` -> `sortTags`) of the RapiDoc attributes. Correspondingly, the swaggerOptions option has been removed.
+- The `rapidocOptions` attribute has been added to configure the RapiDoc UI. This attribute must adhere to the `RapidocUIOptions` interface. Essentially, this interface represents a `camelCase` version (e.g., `sort-tags` -> `sortTags`) of the RapiDoc attributes. Correspondingly, the `swaggerOptions` option has been removed.
   > Note: `spec-url` attribute cannot be configured as the OpenAPI spec of the application is explicitly loaded into RapiDoc upon page load.
 
 
