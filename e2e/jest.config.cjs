@@ -12,6 +12,10 @@ module.exports = {
   coveragePathIgnorePatterns: [
     "<rootDir>/node_modules/",
     "<rootDir>/e2e/",
+    "<rootDir>/e2e-coverage/",
+    "<rootDir>/coverage/",
+    "<rootDir>/dist/",
+    "<rootDir>/lib/",
     ".dto.(t|j)s",
     ".interface.(t|j)s",
   ],

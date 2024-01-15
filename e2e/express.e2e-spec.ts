@@ -69,7 +69,6 @@ describe("Express RapiDoc", () => {
         builder.build(),
       );
       RapidocModule.setup(RAPIDOC_RELATIVE_URL, app, swaggerDocument, {
-        // to showcase that in new implementation u can use custom swagger-ui path. Useful when using e.g. webpack
         customRapidocAssetsPath: path.resolve(`./node_modules/rapidoc/dist`),
       });
 
@@ -78,6 +77,16 @@ describe("Express RapiDoc", () => {
 
     afterEach(async () => {
       await app.close();
+    });
+
+    it("should return the same HTML on every consecutive request", async () => {
+      const response1: Response = await request(app.getHttpServer()).get(
+        RAPIDOC_RELATIVE_URL,
+      );
+      const response2: Response = await request(app.getHttpServer()).get(
+        RAPIDOC_RELATIVE_URL,
+      );
+      expect(response1.text).toEqual(response2.text);
     });
 
     it("content type of served json document should be valid", async () => {
@@ -98,6 +107,43 @@ describe("Express RapiDoc", () => {
       expect(response.status).toEqual(200);
       expect(response.type).toEqual("application/javascript");
       expect(response.status).toEqual(200);
+    });
+
+    it("should serve favicon", async () => {
+      const response = await request(app.getHttpServer()).get(
+        `${RAPIDOC_RELATIVE_URL}/favicon.png`,
+      );
+
+      expect(response.status).toEqual(200);
+      expect(response.type).toEqual("image/png");
+    });
+  });
+
+  describe("served oauth receiver", () => {
+    const RAPIDOC_RELATIVE_URL = "/rapidoc";
+
+    beforeEach(async () => {
+      const swaggerDocument = SwaggerModule.createDocument(
+        app,
+        builder.build(),
+      );
+      RapidocModule.setup(RAPIDOC_RELATIVE_URL, app, swaggerDocument);
+
+      await app.init();
+    });
+
+    afterEach(async () => {
+      await app.close();
+    });
+
+    it("should serve oauth receiver", async () => {
+      const response = await request(app.getHttpServer()).get(
+        `${RAPIDOC_RELATIVE_URL}/oauth-receiver.html`,
+      );
+
+      expect(response.status).toEqual(200);
+      expect(response.type).toEqual("text/html");
+      expect(response.text).toContain("<oauth-receiver />");
     });
   });
 
@@ -218,6 +264,7 @@ describe("Express RapiDoc", () => {
     const CUSTOM_SITE_TITLE = "Foo";
     const CUSTOM_CSS_URL = "/foo.css";
     const CUSTOM_URL = "/custom";
+    const CUSTOM_LOGO = "/logo.png";
 
     beforeEach(async () => {
       const swaggerDocument = SwaggerModule.createDocument(
@@ -232,6 +279,7 @@ describe("Express RapiDoc", () => {
         customFavIcon: CUSTOM_FAVICON,
         customSiteTitle: CUSTOM_SITE_TITLE,
         customCssUrl: CUSTOM_CSS_URL,
+        customLogo: CUSTOM_LOGO,
         patchDocumentOnRequest: (req, res, document) => ({
           ...document,
           info: {
@@ -239,6 +287,10 @@ describe("Express RapiDoc", () => {
             description: (req as Record<string, any>).query.description,
           },
         }),
+        rapidocOptions: {
+          showHeader: false,
+          apiKeyName: "x-api-key",
+        },
       });
 
       await app.init();
@@ -287,6 +339,15 @@ describe("Express RapiDoc", () => {
       );
       expect(response.text).toContain(
         `<link href='${CUSTOM_CSS_URL}' rel='stylesheet'>`,
+      );
+    });
+
+    it("should include the custom logo", async () => {
+      const response: Response = await request(app.getHttpServer()).get(
+        CUSTOM_URL,
+      );
+      expect(response.text).toContain(
+        `<img slot="logo" src='${CUSTOM_LOGO}' style="height:36px;width:36px;margin-left:5px" />`,
       );
     });
 
