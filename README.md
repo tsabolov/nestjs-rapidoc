@@ -1,5 +1,13 @@
 # NestJS Rapidoc Module
 
+<p>
+  <img alt="GitHub License" src="https://img.shields.io/github/license/tsabolov/nestjs-rapidoc" />
+  <img alt="E2E workflow status" src="https://img.shields.io/github/actions/workflow/status/tsabolov/nestjs-rapidoc/e2e.yml" />
+  <img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/tsabolov/nestjs-rapidoc/main" />
+  <img alt="NPM Downloads" src="https://img.shields.io/npm/dt/%40b8n%2Fnestjs-rapidoc" />
+  <img alt="GitHub Repo stars" src="https://img.shields.io/github/stars/tsabolov/nestjs-rapidoc" />
+</p>
+
 [Nest](https://github.com/nestjs/nest) module for seamless integration with [RapiDoc](https://rapidocweb.com/), designed as a drop-in replacement (almost) for the standard [OpenAPI (Swagger)](https://github.com/nestjs/swagger) module.
 
 ## Installation
