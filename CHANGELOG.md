@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.3...v1.0.4) (2024-01-16)
+
+
+### chore
+
+* **README:** add badges to readme ([87c83bd](https://github.com/tsabolov/nestjs-rapidoc/commit/87c83bd51ec330e9ef8120088e0790e26e954e98))
+
 ## [1.0.3](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.2...v1.0.3) (2024-01-15)
 
 
