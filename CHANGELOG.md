@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.4...v1.0.5) (2024-03-20)
+
+
+### fix
+
+* export types ([e4f1a04](https://github.com/tsabolov/nestjs-rapidoc/commit/e4f1a04090f5934cf8433e5d1aab3cfc8910c6d6))
+
 ## [1.0.4](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.3...v1.0.4) (2024-01-16)
 
 
