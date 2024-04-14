@@ -1,3 +1,10 @@
+## [1.0.6](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.5...v1.0.6) (2024-04-14)
+
+
+### chore
+
+* **deps:** update dependencies to latest ([3557481](https://github.com/tsabolov/nestjs-rapidoc/commit/355748170439cae6ff9ee5ff1b3c6f3df5667868))
+
 ## [1.0.5](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.4...v1.0.5) (2024-03-20)
 
 
