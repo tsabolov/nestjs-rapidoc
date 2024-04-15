@@ -1,3 +1,10 @@
+## [1.0.7](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.6...v1.0.7) (2024-04-15)
+
+
+### chore
+
+* **deps:** make [@fastify](https://github.com/fastify)/static a dependency ([59e1458](https://github.com/tsabolov/nestjs-rapidoc/commit/59e1458db9831da894d7cabbc8ccd0ee82553ebd))
+
 ## [1.0.6](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.5...v1.0.6) (2024-04-14)
 
 
