@@ -124,7 +124,7 @@ export interface RapidocUIOptions {
     | false
     | "as-plain-text"
     | "as-colored-text"
-    | "as-colorer-block";
+    | "as-colored-block";
 
   /**
    * Set true to show API paths in the navigation bar instead of summary/description
