@@ -304,7 +304,7 @@ export interface RapidocUIOptions {
    * Constraint and descriptions information of fields in the schema are collapsed to show only the first line. Set it to true if you want them to fully expanded
    * @default false
    */
-  schemaDescriptionExpanded?: "default" | "never";
+  schemaDescriptionExpanded?: boolean;
 
   /**
    * default will show read-only schema attributes in Responses, and in Requests of Webhook / Callback.
