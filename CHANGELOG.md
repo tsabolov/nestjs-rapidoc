@@ -1,3 +1,11 @@
+## [1.0.8](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.7...v1.0.8) (2024-05-21)
+
+
+### fix
+
+* add a default server if no servers were added upon config ([a83de90](https://github.com/tsabolov/nestjs-rapidoc/commit/a83de9048695211347abb0a4f884b32f28082aa0)), closes [#3](https://github.com/tsabolov/nestjs-rapidoc/issues/3)
+* fix RapiDoc options interface, fixes [#4](https://github.com/tsabolov/nestjs-rapidoc/issues/4) ([52a2a76](https://github.com/tsabolov/nestjs-rapidoc/commit/52a2a768b2285b0d942b04cabcd41354f702aeef))
+
 ## [1.0.7](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.6...v1.0.7) (2024-04-15)
 
 
