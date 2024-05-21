@@ -1,3 +1,11 @@
+## [1.0.9](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.8...v1.0.9) (2024-05-21)
+
+
+### fix
+
+* incorrect value for showMethodInNavBar option in RapidocUIOptions ([700644c](https://github.com/tsabolov/nestjs-rapidoc/commit/700644c32991ebfaff93f4ec714d1e66184a3bd1))
+* incorrect value for showMethodInNavBar option in RapidocUIOptions ([d29af24](https://github.com/tsabolov/nestjs-rapidoc/commit/d29af240d6463e1c49e447a8daf426427e926e6a))
+
 ## [1.0.8](https://github.com/tsabolov/nestjs-rapidoc/compare/v1.0.7...v1.0.8) (2024-05-21)
 
 
