@@ -80,7 +80,6 @@ async function bootstrap(): Promise<void> {
     .setTitle("Cats example")
     .setDescription("The cats API description")
     .setVersion("1.0")
-    .addServer("/")
     .addTag("cats")
     .addBasicAuth()
     .addBearerAuth()

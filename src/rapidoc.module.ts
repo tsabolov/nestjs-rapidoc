@@ -58,9 +58,16 @@ export class RapidocModule {
     let document: OpenAPIObject;
 
     const lazyBuildDocument = () => {
-      return typeof documentOrFactory === "function"
-        ? documentOrFactory()
-        : documentOrFactory;
+      const document =
+        typeof documentOrFactory === "function"
+          ? documentOrFactory()
+          : documentOrFactory;
+
+      if (!Array.isArray(document.servers) || document.servers.length === 0) {
+        document.servers = [{ url: "/" }];
+      }
+
+      return document;
     };
 
     const baseUrlForRapidoc = normalizeRelPath(`./${urlLastSubdirectory}/`);
